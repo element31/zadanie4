@@ -1,0 +1,9 @@
+class HomeController < ApplicationController
+	def index
+		if user_signed_in?
+			@napis = 'You signed up and all you got is this lousy line.'
+		else
+			@napis = 'Jestes nie zalogowany'
+		end
+	end
+end
